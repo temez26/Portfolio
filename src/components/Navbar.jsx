@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container">
       
       <section className="flex-start">
-      <a >Bonkkers</a>
+      <a id="title">Bonkkers</a>
       </section>
       <section className="flex-end">
       <a  className="right">Home</a>

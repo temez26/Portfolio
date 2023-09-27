@@ -12,7 +12,7 @@ nav {
 }
 
 .flex-start {
-  font-size: 60px;
+  font-size: 45px;
 }
 
 .flex-end {
@@ -27,9 +27,20 @@ nav {
 }
 
  a:hover {
-    color: #535bf2;
+    color: #ffffff;
+    opacity:0.5;
   }
-
+#title {
+    border: 2px solid white; 
+    border-radius:4px;
+    padding-right:4px;
+    padding-left:4px;
+  }
+  #title:hover {
+    color:white;
+    opacity:0.9;
+  }
+  
 
 @media (max-width: 700px) {
 

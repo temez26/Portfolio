@@ -1,0 +1,30 @@
+footer {
+    margin-right:2%;
+    margin-left:2%;
+    
+   
+}
+.footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+.social-icons {
+    display:flex;
+    justify-content:center;
+   
+
+}
+.github {
+    font-size: 28px;
+    padding:3px;
+    color:white;
+}
+
+.linkedin {
+    font-size:28px;
+    padding:3px;
+    color:rgb(0, 76, 190);
+} 
