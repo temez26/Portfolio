@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-.Body {
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    min-height:100vh;
-   
-   
-}
 
-=======
+
+
 .Body {
     min-height:100vh;
     display: flex;
@@ -16,4 +8,4 @@
     
     align-items: center;
 }
->>>>>>> fd1f6b4576dd74d69c3827fe22062a179613d203
+
