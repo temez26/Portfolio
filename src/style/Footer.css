@@ -8,6 +8,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-style:italic;
 }
 
 .socials {
@@ -16,12 +17,17 @@ footer {
     font-size:28px;
     
 }
-.github {
-    color:white;
-    padding:3px;
+.social-icons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-.linkedin {
-    color: #0077b5;
-    padding: 3px;
+.icon-container {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    position: relative;
 }
+
+   

@@ -3,9 +3,29 @@
 
 .Body {
     min-height:100vh;
+   
+}
+.icon-body1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    width:40%;
+    
+   
+  
+    
+}
+.icon-body2 {
+    display:flex;
+    justify-content:flex-end;
+    align-items:end;
+    
+    
+}
+
+.icon-body3 {
     display: flex;
     justify-content:center;
-    
     align-items: center;
 }
 

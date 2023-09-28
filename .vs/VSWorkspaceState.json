@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\style"
   ],
-  "SelectedNode": "\\C:\\Users\\temek\\Source\\Repos\\Portfolio",
+  "SelectedNode": "\\src\\style\\Footer.css",
   "PreviewInSolutionExplorer": false
 }
