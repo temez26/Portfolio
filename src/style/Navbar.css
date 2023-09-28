@@ -1,55 +1,84 @@
 nav {
-  padding-left:2%;
-  padding-right:2%;
-   
+    padding-left: 2%;
+    padding-right: 2%;
+    transition: background-color 0.3s ease; /* Add transition for background color */
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* To evenly distribute content */
-  align-items: center; /* To vertically align content */
+
   
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.darkmode-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 20px;
+    padding-right: 5px;
+    width: 100%;
+    font-size: 30px;
+    transition: all 0.5s ease; /* Adjust the duration and timing function as needed */
+}
+
+    .darkmode-icon:hover {
+        opacity: 0.8;
+        transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
+        transition-delay: 0.2s; /* Adjust the delay as needed */
+    }
+
+
+.moon-icon {
+    color: #e5e5e5;
+}
+
+.sun-icon {
+    color: #ffe484;
 }
 
 .flex-start {
-  font-size: 45px;
+    font-size: 45px;
 }
 
 .flex-end {
-  font-size: 32px;
-  position:relative;
-  margin-bottom:-15px;
-
-  
+    font-size: 32px;
+    position: relative;
+    margin-bottom: -15px;
 }
+
 .right {
-  padding-right:10px;
+    padding-right: 10px;
 }
 
- a:hover {
+a:hover {
     color: #ffffff;
-    opacity:0.5;
-  }
+    opacity: 0.5;
+    transition: color 0.2s ease, opacity 0.2s ease; 
+    transition-delay: 0.1s; 
+}
+
+
 #title {
-    border: 2px solid white; 
-    border-radius:4px;
-    padding-right:4px;
-    padding-left:4px;
-  }
-  #title:hover {
-    color:white;
-    opacity:0.9;
-  }
-  
+    border: 2px solid white;
+    border-radius: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+    #title:hover {
+        color: white;
+        opacity: 0.9;
+    }
 
 @media (max-width: 700px) {
+    .flex-start {
+        font-size: 40px;
+    }
 
-  .flex-start {
-    font-size:40px;
-  }
-  .flex-end {
-    font-size:23px;
-  }
-
-
+    .flex-end {
+        font-size: 23px;
+    }
 }

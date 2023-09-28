@@ -41,14 +41,14 @@ function Body() {
 
     return (
         <div className="Body">
-            <div className="icon-body1" onMouseEnter={onMouseEnterCoding} onMouseLeave={onMouseLeaveCoding}>
-                <Lottie animationData={Coding} loop={codingStopped} />
+            <div className="icon-body1" >
+                <Lottie animationData={Coding} loop={codingStopped} onMouseEnter={onMouseEnterCoding} onMouseLeave={onMouseLeaveCoding} className="icon1" />
             </div>
-            <div className="icon-body2" onMouseEnter={onMouseEnterCodingApe} onMouseLeave={onMouseLeaveCodingApe}>
-                <Lottie animationData={CodingApe} loop={codingApeStopped} />
+            <div className="icon-body2" >
+                <Lottie animationData={CodingApe} loop={codingApeStopped} onMouseEnter={onMouseEnterCodingApe} onMouseLeave={onMouseLeaveCodingApe} className="icon2" />
             </div>
-            <div className="icon-body3" onMouseEnter={onMouseEnterComputer} onMouseLeave={onMouseLeaveComputer}>
-                <Lottie animationData={Computer} loop={computerStopped} />
+            <div className="icon-body3" >
+                <Lottie animationData={Computer} loop={computerStopped} onMouseEnter={onMouseEnterComputer} onMouseLeave={onMouseLeaveComputer} className="icon3" />
             </div>
         </div>
     );
