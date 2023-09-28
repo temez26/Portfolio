@@ -6,6 +6,7 @@
 - Added social media icons and background cover.
 - Added background animated icons to the body component.
 - Added hover logic to the animated icons.
+- Added darkmode with icons
   
 ## To do
 - Hover logic on the animated icons needs to be adjusted that the animation dont start over when mouse is hovered away from the icon.
