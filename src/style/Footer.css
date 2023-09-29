@@ -14,7 +14,7 @@ footer {
 .socials {
     display: flex;
     justify-content: center;
-    font-size:28px;
+   
     
 }
 .social-icons-container {
@@ -28,6 +28,25 @@ footer {
     height: 70px;
     overflow: hidden;
     position: relative;
+}
+.icon-container1 {
+    width:84px;
+    
+
+}
+
+
+@media (max-width: 700px) {
+    .icon-container {
+        width: 46px;
+        height: 46px;
+        
+    }
+
+    .icon-container1 {
+        width: 60px;
+    }
+
 }
 
    

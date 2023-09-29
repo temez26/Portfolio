@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Lottie from 'lottie-react';
 import Github from '../assets/github.json';
-import Linkedin from '../assets/linkedin.json';
+import Linkedin from '../assets/linkedin11.json';
 
 
 function Footer() {
@@ -35,7 +35,7 @@ function Footer() {
                 <section className="socials">
                     <div className="social-icons-container">
                         <a href="https://github.com/temez26" target="_blank" rel="noopener noreferrer">
-                            <div className="icon-container" onMouseEnter={onMouseEnterGithub} onMouseLeave={onMouseLeaveGithub}>
+                            <div className="icon-container1" onMouseEnter={onMouseEnterGithub} onMouseLeave={onMouseLeaveGithub}>
                                 <Lottie animationData={Github} loop={githubStopped} />
                             </div>
                         </a>

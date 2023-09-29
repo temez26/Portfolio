@@ -35,12 +35,22 @@
 }
 
 .icon2 {
-    width:500px;
-    flex-grow: 0.1;
+    width:30%;
+    
+    flex-grow: 0.01;
 }
 .icon3 {
     flex-grow: 0.5;
 }
-
+.text-animation1 {
+    margin-top:10%;
+}
+.text-animation2 {
+    margin-right:23%;
+}
+.text-animation3 {
+    position:absolute;
+    margin-top:50%;
+}
 
 
