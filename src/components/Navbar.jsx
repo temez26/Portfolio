@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import styled, { createGlobalStyle } from 'styled-components';
-import Lottie from 'lottie-react';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,13 +17,18 @@ const NavbarContainer = styled.header`
 `;
 
 const Navbar = () => {
-    const [isMoonVisible, setIsMoonVisible] = useState(false); // Change the initial state to false
+    const [isMoonVisible, setIsMoonVisible] = useState(true);
+
+    // Initialize darkMode state with the value from local storage, defaulting to true if it's not found
+    const [darkMode, setDarkMode] = useState(() => {
+        const storedDarkMode = localStorage.getItem('darkMode');
+        return storedDarkMode ? JSON.parse(storedDarkMode) : true;
+    });
 
     const toggleDarkMode = () => {
+        setDarkMode(!darkMode); // Update the state
         setIsMoonVisible(!isMoonVisible);
     };
-
-    const darkMode = isMoonVisible; // Change the logic to use isMoonVisible directly
 
     useEffect(() => {
         localStorage.setItem('darkMode', JSON.stringify(darkMode));

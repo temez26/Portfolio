@@ -95,13 +95,25 @@ function Body() {
                     className="icon1"
                 />
                 <p ref={codingRef} className="text-animation1">
-                    Text for Animation 1
+                <h2 className="text-animation-h2">My portfolio</h2>   
+                Hello, I'm Teemu Kalmari, a dedicated Software Engineer student with a passion for crafting digital experiences. My journey in the world of technology has been shaped by a profound love for coding and a relentless curiosity for innovation.
+                
+
                 </p>
+        
             </div>
+           
+      
           
             <div className="icon-body2">
-                <p ref={codingApeRef} className="text-animation2">
-                    Text for Animation 2
+            <p ref={codingApeRef}className="text-animation1-2">
+             <h2 className="text-animation-h2">Technical Expertise</h2>   
+
+Python: My code is poetry. I'm fluent in Python, leveraging its versatility to create powerful solutions that range from data analysis to web development.
+
+Web Development: I'm well-versed in the art of web coding, with proficiency in both frontend and backend technologies. I specialize in crafting seamless user interfaces with popular frameworks like React and Vite, ensuring that user experiences are not just functional but delightful.
+
+C++ & C#: My coding skills extend beyond web development. I'm adept in C++ and C#, enabling me to tackle complex software projects and build efficient applications.
                 </p>
                 <Lottie
                     animationData={CodingApe}
