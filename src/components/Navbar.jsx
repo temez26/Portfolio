@@ -17,22 +17,28 @@ const NavbarContainer = styled.header`
 `;
 
 const Navbar = () => {
-    const [isMoonVisible, setIsMoonVisible] = useState(true);
-
-    // Initialize darkMode state with the value from local storage, defaulting to true if it's not found
     const [darkMode, setDarkMode] = useState(() => {
         const storedDarkMode = localStorage.getItem('darkMode');
         return storedDarkMode ? JSON.parse(storedDarkMode) : true;
     });
 
+    const [isMoonVisible, setIsMoonVisible] = useState(() => {
+        const storedIsMoonVisible = localStorage.getItem('isMoonVisible');
+        return storedIsMoonVisible ? JSON.parse(storedIsMoonVisible) : true;
+    });
+
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode); // Update the state
+        setDarkMode(!darkMode);
         setIsMoonVisible(!isMoonVisible);
     };
 
     useEffect(() => {
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
     }, [darkMode]);
+
+    useEffect(() => {
+        localStorage.setItem('isMoonVisible', JSON.stringify(isMoonVisible));
+    }, [isMoonVisible]);
 
     return (
         <>

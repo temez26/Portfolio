@@ -25,19 +25,26 @@ nav {
     transition: all 0.5s ease; /* Adjust the duration and timing function as needed */
 }
 
-    .darkmode-icon:hover {
-        opacity: 0.8;
-        transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
-        transition-delay: 0.2s; /* Adjust the delay as needed */
-    }
+ 
 
 
 .moon-icon {
-    color: #e5e5e5;
+    color: rgb(255, 223, 117);
+    transition: all 0.5s ease;
+}
+.moon-icon:hover {
+    opacity: 0.8;
+    transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
+    transition-delay: 0.2s; /* Adjust the delay as needed */
 }
 
 .sun-icon {
-    color: #ffe484;
+    color: #ffcb11;
+}
+.sun-icon:hover {
+    opacity: 0.8;
+    transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
+    transition-delay: 0.2s; /* Adjust the delay as needed */
 }
 
 .flex-start {
