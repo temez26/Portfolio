@@ -30,7 +30,7 @@ footer {
     position: relative;
 }
 .icon-container1 {
-    width:84px;
+    width:88px;
     
 
 }
@@ -38,13 +38,15 @@ footer {
 
 @media (max-width: 700px) {
     .icon-container {
-        width: 46px;
-        height: 46px;
+        width: 53px;
+        height: 64px;
+        
         
     }
 
     .icon-container1 {
-        width: 60px;
+        width: 64px;
+        height:64px;
     }
 
 }

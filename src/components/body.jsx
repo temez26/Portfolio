@@ -44,7 +44,7 @@ function Body() {
             trigger: codingRef.current,
             start: 'top 80%',
             onEnter: () => {
-                setCodingStopped(true);
+                setCodingStopped(false);
                 codingAnimation.play();
             },
             onLeaveBack: () => {
