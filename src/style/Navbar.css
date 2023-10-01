@@ -35,7 +35,7 @@ nav {
 .moon-icon:hover {
     opacity: 0.8;
     transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
-    transition-delay: 0.2s; /* Adjust the delay as needed */
+ 
 }
 
 .sun-icon {
@@ -44,7 +44,7 @@ nav {
 .sun-icon:hover {
     opacity: 0.8;
     transform: scale(1.001); /* Adjust the scale factor for a slow zoom effect */
-    transition-delay: 0.2s; /* Adjust the delay as needed */
+   /
 }
 
 .flex-start {
@@ -65,7 +65,7 @@ a:hover {
     color: #ffffff;
     opacity: 0.5;
     transition: color 0.2s ease, opacity 0.2s ease; 
-    transition-delay: 0.1s; 
+    
 }
 
 
