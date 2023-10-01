@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Lottie from 'lottie-react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-
+import '../style/scrollAnimation.css'
+import Scrollanimation from './scrollAnimation.jsx'
+import React, { useState, useEffect, useRef } from 'react';
+import Lottie from 'lottie-react';
 import Coding from '../assets/coding.json';
 import CodingApe from '../assets/codingape.json';
 import Computer from '../assets/computer.json';
@@ -37,45 +38,58 @@ function Body() {
             opacity: 0,
             y: 20,
             duration: 1,
-            paused: true,
+            paused: true, 
         });
 
         ScrollTrigger.create({
             trigger: codingRef.current,
             start: 'top 50%',
+            end: 'bottom 50%',
             onEnter: () => {
-                setCodingStopped(false);
-                codingAnimation.play();
+                setTimeout(() => {
+                    setCodingStopped(false);
+                    codingAnimation.play();
+                }, 300);
             },
             onLeaveBack: () => {
-                setCodingStopped(false);
-                codingAnimation.reverse();
+                setCodingStopped(true);
+                codingAnimation.pause();
             },
         });
 
         ScrollTrigger.create({
+            
             trigger: codingApeRef.current,
-            start: 'top 95%',
+            start: 'top 80%',
+            end: 'bottom 50%',
+            
+            once: true,
             onEnter: () => {
-                setCodingApeStopped(true);
-                codingApeAnimation.play();
+                setTimeout(() => {
+                    setCodingApeStopped(false);
+                    codingApeAnimation.play();
+                }, 100);
             },
             onLeaveBack: () => {
-                setCodingApeStopped(false);
-                codingApeAnimation.reverse();
+                setCodingApeStopped(true);
+                codingApeAnimation.pause();
             },
         });
 
         ScrollTrigger.create({
             trigger: computerRef.current,
             start: 'top 90%',
+            once:true,
+           
             onEnter: () => {
-                setComputerStopped(true);
-                computerAnimation.play();
+                setTimeout(() => {
+                    setComputerStopped(false);
+                    computerAnimation.play();
+                }); 
             },
             onLeaveBack: () => {
-                setComputerStopped(false);
-                computerAnimation.reverse();
+                setComputerStopped(true);
+                computerAnimation.pause(); 
             },
         });
 
@@ -115,24 +129,21 @@ function Body() {
                 </div>
                 <Lottie
                     animationData={CodingApe}
-                    loop={codingApeStopped}
+                    
                     className="icon2"
                 />
             </div>
 
             <div className="icon-body3">
-                <Lottie
-                    animationData={Computer}
-                    loop={computerStopped}
-                    className="icon3"
-                />
+                <Scrollanimation />
+                
                 <div ref={computerRef} className="text-animation3">
-                    <h2 className="text-animation-h2">Text for Animation 3</h2>
+                   
+                   
                 </div>
             </div>
         </div>
     );
-
 }
 
 export default Body;
