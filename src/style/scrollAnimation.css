@@ -1,5 +1,6 @@
 .scroller {
-    max-width: 600px;
+    max-width: 1000px;
+    
 }
 
 .scroller__inner {
@@ -80,6 +81,26 @@ body {
     }
 
 /* for testing purposed to ensure the animation lined up correctly */
-.test {
-    background: red !important;
+
+@media (max-width: 1000px) {
+
+    .scroller {
+        max-width: 600px;
+    }
+
+
 }
+@media (max-width: 700px) {
+
+    .scroller {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .scroller {
+        max-width: 300px;
+    }
+}
+
