@@ -38,13 +38,14 @@ function Body() {
             opacity: 0,
             y: 20,
             duration: 1,
-            paused: true, 
+            paused: true,
         });
 
         ScrollTrigger.create({
             trigger: codingRef.current,
-            start: 'top 50%',
+            start: 'top 90%',
             end: 'bottom 50%',
+            once: true,
             onEnter: () => {
                 setTimeout(() => {
                     setCodingStopped(false);
@@ -58,11 +59,11 @@ function Body() {
         });
 
         ScrollTrigger.create({
-            
+
             trigger: codingApeRef.current,
             start: 'top 80%',
             end: 'bottom 50%',
-            
+
             once: true,
             onEnter: () => {
                 setTimeout(() => {
@@ -79,17 +80,17 @@ function Body() {
         ScrollTrigger.create({
             trigger: computerRef.current,
             start: 'top 90%',
-            once:true,
-           
+            once: true,
+
             onEnter: () => {
                 setTimeout(() => {
                     setComputerStopped(false);
                     computerAnimation.play();
-                }); 
+                });
             },
             onLeaveBack: () => {
                 setComputerStopped(true);
-                computerAnimation.pause(); 
+                computerAnimation.pause();
             },
         });
 
@@ -129,17 +130,17 @@ function Body() {
                 </div>
                 <Lottie
                     animationData={CodingApe}
-                    
+
                     className="icon2"
                 />
             </div>
 
             <div className="icon-body3">
                 <Scrollanimation />
-                
+
                 <div ref={computerRef} className="text-animation3">
-                   
-                   
+
+
                 </div>
             </div>
         </div>

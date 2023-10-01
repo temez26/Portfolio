@@ -3,6 +3,7 @@
 
 .Body {
     min-height:100vh;
+    position:relative;
    
 }
 
@@ -35,9 +36,9 @@
 }
 
 .icon2 {
-    width:100%;
     
-    flex-grow: 0.5;
+    width:60%;
+    flex-grow: 0.2;
 }
 .icon3 {
     flex-grow: 0.5;
@@ -72,4 +73,39 @@
     margin-top:50%;
 }
 
+
+@media (max-width: 700px) {
+   
+    .text-animation1-2 {
+        font-size: 14px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-weight: 500;
+    }
+    .text-animation-h2 {
+        
+        font-size: 30px;
+        font-weight: 500;
+        color: rgb(206, 158, 0);
+    }
+    .text-animation1 {
+        width:90%;
+      margin-top:0;
+       justify-content:center;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .icon-body2 {
+       
+        flex-direction:column;
+        
+        min-height: 500px;
+    }
+    .icon-body1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+}
 
