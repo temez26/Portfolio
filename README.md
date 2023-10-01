@@ -1,4 +1,4 @@
-# Welcome to my portfolio
+# Welcome to my portfolio :rocket:
 
 ## Here comes all updates that i make
 
