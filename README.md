@@ -10,7 +10,7 @@
 - Added scroll animation to the text with gsap
   
 ## To do :white_check_mark:
-- Hover logic on the animated icons needs to be adjusted so that the animation doesn't start over when the mouse is hovered away from the icon.
+- Hover logic on the animated icons needs to be adjusted so that the animation doesn't start over when the mouse is hovered away from the icon. Done :+1:
 - Add underline hover effect to navbar icons. Done :+1:
 - Add CSS waves somewhere on the page
 - Add [this youtube video](https://www.youtube.com/watch?v=iLmBy-HKIAw&list=PLlOTzQUlSorMdRm1ManvpMOKuZSamDJj4&index=19&t=220s) to create infinite horizontal scroll animation. Done :+1:
