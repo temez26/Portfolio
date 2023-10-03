@@ -6,8 +6,10 @@
 - Added social media icons and background cover.
 - Added background animated icons to the body component.
 - Added hover logic to the animated icons.
-- Added darkmode with icons
-- Added scroll animation to the text with gsap
+- Added darkmode with icons.
+- Added scroll animation to the text with gsap.
+- Added coding language icons and text to the infite scroll animation component.
+- Added hover effect to infinite scroll animation icons.
 
 ## To do :white_check_mark:
 
