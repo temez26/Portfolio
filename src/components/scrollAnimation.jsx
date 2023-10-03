@@ -1,4 +1,8 @@
 import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faPython, faGithub, faJs, faNode, faJava, faLinkedin, faNpm, faCss3Alt, faHtml5} from '@fortawesome/free-brands-svg-icons';
+import { faImage } from '@fortawesome/free-solid-svg-icons'; 
+
 
 function Scrollanimation() {
     useEffect(() => {
@@ -42,19 +46,36 @@ function Scrollanimation() {
                     <li>webdev</li>
                     <li>animation</li>
                     <li>UI/UX</li>
+                    <li>Node</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>React</li>
+                    <li>Vite</li>
+                    <li>Npm</li>
+
+
                 </ul>
             </div>
             <div className="scroller" data-direction="right" data-speed="slow">
                 <div className="scroller__inner">
-                    <img src="https://i.pravatar.cc/150?img=1" alt="" />
-                    <img src="https://i.pravatar.cc/150?img=2" alt="" />
-                    <img src="https://i.pravatar.cc/150?img=3" alt="" />
-                    <img src="https://i.pravatar.cc/150?img=4" alt="" />
-                    <img src="https://i.pravatar.cc/150?img=5" alt="" />
-                    <img src="https://i.pravatar.cc/150?img=6" alt="" />
+                    <FontAwesomeIcon icon={faReact} className="scroll-icons" />
+                    <FontAwesomeIcon icon={faPython} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faGithub} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faJs} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faNode} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faJava} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faHtml5} className="scroll-icons" />
+                    <FontAwesomeIcon icon={faLinkedin} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faNpm} className="scroll-icons" /> 
+                    <FontAwesomeIcon icon={faCss3Alt} className="scroll-icons" />
+                  
+                    
+                   
                 </div>
             </div>
-           
+
         </div>
     );
 }
