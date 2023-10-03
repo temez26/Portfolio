@@ -36,7 +36,7 @@ function Scrollanimation() {
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center' }}>Infinite Scroll Animation</h1>
+            <h1 style={{ textAlign: 'center' }} className="h1-color">Exploring a World of Coding: My Diverse Skillset</h1>
             <div className="scroller" data-speed="fast">
                 <ul className="tag-list scroller__inner">
                     <li>HTML</li>

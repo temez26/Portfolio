@@ -117,6 +117,16 @@ function Body() {
                 </div>
             </div>
 
+
+            <div className="icon-body3">
+                <Scrollanimation />
+
+                <div ref={computerRef} className="text-animation3">
+
+
+                </div>
+            </div>
+
             <div className="icon-body2">
                 <div ref={codingApeRef} className="text-animation1-2">
                     <h2 className="text-animation-h2">Technical Expertise</h2>
@@ -135,14 +145,7 @@ function Body() {
                 />
             </div>
 
-            <div className="icon-body3">
-                <Scrollanimation />
-
-                <div ref={computerRef} className="text-animation3">
-
-
-                </div>
-            </div>
+            
         </div>
     );
 }
