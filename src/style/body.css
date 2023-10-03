@@ -1,191 +1,161 @@
-
-
-
 .Body {
-    min-height:100vh;
-  display:flex;
-  flex-direction:column;
-    position:relative;
-    
-   
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-
 
 .icon-body1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    
-    
-  
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
 }
 .icon-body2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content:space-between;
-    padding-top:5%;
-    padding-bottom:5%;
-   
-    
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .icon-body3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top:5%;
-    padding-bottom:5%;
-    
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .icon1 {
-   flex-grow:1;
+  flex-grow: 1;
 }
 
 .icon2 {
-    
-   
-    flex-grow: 0.2;
+  flex-grow: 0.2;
 }
 .icon3 {
-    flex-grow: 0.5;
+  flex-grow: 0.5;
 }
 .text-animation1 {
-    padding-right:5%;
-    margin-top:10%;
-    width:50%;
-    font-weight:500;
-    font-size:30px;
+  padding-right: 5%;
+  margin-top: 10%;
+  width: 50%;
+  font-weight: 500;
+  font-size: 30px;
 }
 .text-animation1-2 {
-    font-size:30px;
-    padding-left:5%;
-    
-    width:50%;
-    font-weight:500;
-
-
-    
+  font-size: 30px;
+  padding-left: 5%;
+  color:white;
+  width: 50%;
+  font-weight: 500;
 }
 .text-animation-h2 {
-    font-size:60px;
-    font-weight:500;
-    color: rgb(206, 158, 0);
+  font-size: 60px;
+  font-weight: 500;
+  color: rgb(206, 158, 0);
 }
 
 .text-animation2 {
-    margin-right:23%;
+  margin-right: 23%;
 }
 .text-animation3 {
-    position:absolute;
-    margin-top:50%;
+  position: absolute;
+  margin-top: 50%;
 }
 
-
-
-
-
-
 @media (max-width: 1400px) {
-    .text-animation1-2 {
-        font-size: 25px;
-        padding-left: 5%;
-        width: 30%;
-        font-weight: 500;
-    }
+  .text-animation1-2 {
+    font-size: 25px;
+    padding-left: 5%;
+    width: 30%;
+    font-weight: 500;
+  }
 
-    .text-animation1 {
-        margin-top: 10%;
-        width: 30%;
-        font-weight: 500;
-        font-size: 27px;
-    }
+  .text-animation1 {
+    margin-top: 10%;
+    width: 30%;
+    font-weight: 500;
+    font-size: 27px;
+  }
 
-    .text-animation-h2 {
-        font-size: 50px;
-        font-weight: 500;
-        color: rgb(206, 158, 0);
-    }
+  .text-animation-h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(206, 158, 0);
+  }
 }
 
 @media (max-width: 1200px) {
-    .text-animation1-2 {
-        font-size: 22px;
-        padding-left: 5%;
-        width: 30%;
-        font-weight: 500;
-    }
+  .text-animation1-2 {
+    font-size: 22px;
+    padding-left: 5%;
+    width: 30%;
+    font-weight: 500;
+  }
 
-    .text-animation1 {
-        margin-top: 10%;
-        width: 30%;
-        font-weight: 500;
-        font-size: 24px;
-    }
+  .text-animation1 {
+    margin-top: 10%;
+    width: 30%;
+    font-weight: 500;
+    font-size: 24px;
+  }
 
-    .text-animation-h2 {
-        font-size: 40px;
-        font-weight: 500;
-        color: rgb(206, 158, 0);
-    }
+  .text-animation-h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: rgb(206, 158, 0);
+  }
 }
 
 @media (max-width: 1000px) {
-    .text-animation1-2 {
-        font-size: 18px;
-        padding-left: 5%;
-        width: 30%;
-        font-weight: 500;
-    }
-    .text-animation1 {
-        margin-top: 10%;
-        width: 30%;
-        font-weight: 500;
-        font-size: 20px;
-    }
-    .text-animation-h2 {
-        font-size: 35px;
-        font-weight: 500;
-        color: rgb(206, 158, 0);
-    }
-
-  
+  .text-animation1-2 {
+    font-size: 18px;
+    padding-left: 5%;
+    width: 30%;
+    font-weight: 500;
+  }
+  .text-animation1 {
+    margin-top: 10%;
+    width: 30%;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .text-animation-h2 {
+    font-size: 35px;
+    font-weight: 500;
+    color: rgb(206, 158, 0);
+  }
 }
 
 @media (max-width: 700px) {
-   
-    .text-animation1-2 {
-        width:95%;
-        font-size: 14px;
-       padding-right:5%;
-        font-weight: 500;
-    }
-    .text-animation-h2 {
-        
-        font-size: 30px;
-        font-weight: 500;
-        color: rgb(206, 158, 0);
-    }
-    .text-animation1 {
-        width:90%;
-      margin-top:0;
-       justify-content:center;
-        font-weight: 500;
-        font-size: 16px;
-    }
-    .icon-body2 {
-       
-        flex-direction:column;
-        
-        min-height: 500px;
-    }
-    .icon-body1 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-  
-}
+  .text-animation1-2 {
+    width: 95%;
+    font-size: 14px;
+    padding-right: 5%;
+    font-weight: 500;
+  }
+  .text-animation-h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(206, 158, 0);
+  }
+  .text-animation1 {
+    width: 90%;
+    margin-top: 0;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .icon-body2 {
+    flex-direction: column;
 
+    min-height: 500px;
+  }
+  .icon-body1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
