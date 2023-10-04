@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: ${(props) =>
       props.darkMode
-        ? "radial-gradient(circle, rgba(142, 142, 142, 1) 0%, rgba(96, 96, 96, 1) 100%)"
+        ? "background: radial-gradient(circle, rgba(45,62,125,1) 0%, rgba(27,30,135,1) 50%);"
         : "radial-gradient(circle, rgba(0, 4, 45, 1) 0%, rgba(0, 0, 0, 1) 100%)"};
     color: ${(props) => (props.darkMode ? "#fff" : "#fff")};
   }

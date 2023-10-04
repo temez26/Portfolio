@@ -45,7 +45,7 @@ function Scrollanimation() {
   }, []);
 
   return (
-    <div>
+    <div className="scrollanimation">
       <h1 style={{ textAlign: "center" }} className="h1-color">
         Exploring a World of Coding: My Diverse Skillset
       </h1>
@@ -77,7 +77,7 @@ function Scrollanimation() {
           <FontAwesomeIcon icon={faNode} className="scroll-icons" />
           <FontAwesomeIcon icon={faJava} className="scroll-icons" />
           <FontAwesomeIcon icon={faHtml5} className="scroll-icons" />
-          <FontAwesomeIcon icon={faLinkedin} className="scroll-icons" />
+
           <FontAwesomeIcon icon={faNpm} className="scroll-icons" />
           <FontAwesomeIcon icon={faCss3Alt} className="scroll-icons" />
         </div>

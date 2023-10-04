@@ -1,11 +1,13 @@
 footer {
+    position:relative;
   margin-right: 2%;
   margin-left: 2%;
+ 
 }
 
 .footer-section {
   display: flex;
-  flex-direction: row;
+  
   justify-content: space-between;
   align-items: center;
   font-style: italic;

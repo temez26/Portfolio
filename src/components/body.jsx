@@ -6,6 +6,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import Coding from "../assets/coding.json";
 import CodingApe from "../assets/codingape.json";
+import ImageSlider from './imageslider.jsx'
+import website1 from "../assets/website1.png"
+import website2 from "../assets/website2.png"
+import website3 from "../assets/website7.png"
+import website4 from "../assets/website4.png"
+import website5 from "../assets/website5.png"
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +25,17 @@ function Body() {
   const codingRef = useRef(null);
   const codingApeRef = useRef(null);
   const computerRef = useRef(null);
+
+const IMAGES = [
+  { url: website1, alt: "website1" },
+  { url: website2, alt: "website2" },
+  { url: website4, alt: "website3" },
+  { url: website3, alt: "website4" },
+  { url: website5, alt: "website5" },
+  
+ 
+]
+
 
   useEffect(() => {
     const codingAnimation = gsap.from(codingRef.current, {
@@ -117,8 +135,6 @@ function Body() {
 
       <div className="icon-body3">
         <Scrollanimation />
-
-        <div ref={computerRef} className="text-animation3"></div>
       </div>
 
       <div className="icon-body2">
@@ -139,6 +155,21 @@ function Body() {
         </div>
         <Lottie animationData={CodingApe} className="icon2" />
       </div>
+         <div
+      style={{
+        maxWidth: "1400px",
+        width: "100%",
+        aspectRatio: "10 / 6",
+        margin: "0 auto",
+        
+      }}
+     className="myprojects">
+      <h1 className="text-animation-h2">My Projects</h1>
+      <ImageSlider images={IMAGES} />
+      <a href="/" style={{ fontSize: "4rem" }}>
+        
+      </a>
+    </div>
     </div>
   );
 }
