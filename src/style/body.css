@@ -6,17 +6,14 @@
   margin-bottom: 10%;
 }
 .myprojects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .scrollanimation {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon-body1 {
@@ -29,8 +26,8 @@
   justify-content: flex-end;
   align-items: center;
   justify-content: space-between;
-  margin-bottom:8%;
-  margin-top:5%;
+  margin-bottom: 8%;
+  margin-top: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -39,10 +36,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   padding-top: 5%;
   padding-bottom: 5%;
- 
 }
 
 .icon1 {
@@ -78,8 +73,6 @@
 .text-animation2 {
   margin-right: 23%;
 }
-
-
 
 @media (max-width: 1400px) {
   .text-animation1-2 {
@@ -146,9 +139,9 @@
 }
 
 @media (max-width: 700px) {
- .Body {
-     min-height:2400px;
- }
+  .Body {
+    min-height: 2400px;
+  }
   .text-animation1-2 {
     width: 95%;
     font-size: 14px;

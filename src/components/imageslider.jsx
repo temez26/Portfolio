@@ -92,7 +92,11 @@ function ImageSlider({ images }) {
             aria-label={`View Image ${index + 1}`}
             onClick={() => setImageIndex(index)}
           >
-            {index === imageIndex ? <CircleDot aria-hidden /> : <Circle aria-hidden />}
+            {index === imageIndex ? (
+              <CircleDot aria-hidden />
+            ) : (
+              <Circle aria-hidden />
+            )}
           </button>
         ))}
       </div>
