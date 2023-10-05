@@ -11,6 +11,7 @@
 - Added coding language icons and text to the infite scroll animation component. ✨
 - Added hover effect to infinite scroll animation icons. ✨
 - Added image slider to the site. ✨
+- Added wawe background to navbar and footer. ✨
 
 ## To do :white_check_mark:
 
@@ -20,3 +21,4 @@
 - Add [this youtube video](https://www.youtube.com/watch?v=iLmBy-HKIAw&list=PLlOTzQUlSorMdRm1ManvpMOKuZSamDJj4&index=19&t=220s) to create infinite horizontal scroll animation. Done :+1:
 - Add [this TikTok video](https://www.tiktok.com/@codetheworld.io/video/7283734773472693511?is_from_webapp=1&sender_device=pc&web_id=7284955038152869409) to over some of the icons.
 - Add box reflect glowing icons. Done :+1:
+- First animation needs to be modified that the stars and eyes leave to animate on loop. 
