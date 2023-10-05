@@ -10,6 +10,7 @@
 - Added scroll animation to the text with gsap. ✨
 - Added coding language icons and text to the infite scroll animation component. ✨
 - Added hover effect to infinite scroll animation icons. ✨
+- Added image slider to the site. ✨
 
 ## To do :white_check_mark:
 
