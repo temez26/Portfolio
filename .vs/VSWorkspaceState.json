@@ -1,5 +1,11 @@
 {
-  "ExpandedNodes": [""],
-  "SelectedNode": "\\C:\\Users\\temek\\Source\\Repos\\Portfolio",
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\style"
+  ],
+  "SelectedNode": "\\src\\style\\App.css",
   "PreviewInSolutionExplorer": false
 }

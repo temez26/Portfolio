@@ -24,13 +24,24 @@ function Body() {
   const codingApeRef = useRef(null);
   const computerRef = useRef(null);
 
-  const IMAGES = [
-    { url: website1, alt: "website1" },
-    { url: website2, alt: "website2" },
-    { url: website4, alt: "website3" },
-    { url: website3, alt: "website4" },
-    { url: website5, alt: "website5" },
-  ];
+    const IMAGES = [
+        { url: website1, alt: "website1" },
+        { url: website2, alt: "website2" },
+        { url: website3, alt: "website3" },
+        { url: website4, alt: "website4" },
+        { url: website5, alt: "website5" },
+    ];
+
+    const links = [
+        'https://superboi.azurewebsites.net/',
+        'https://triv.azurewebsites.net/',
+        'https://particless.azurewebsites.net/', 
+        'https://slaythedragon.azurewebsites.net/', 
+        'https://garden-web.azurewebsites.net/',
+    ];
+
+
+
 
   useEffect(() => {
     const codingAnimation = gsap.from(codingRef.current, {
@@ -160,7 +171,7 @@ function Body() {
         className="myprojects"
       >
         <h1 className="text-animation-h2">My Projects</h1>
-        <ImageSlider images={IMAGES} />
+              <ImageSlider images={IMAGES} links={links} />
         <a href="/" style={{ fontSize: "4rem" }}></a>
       </div>
     </div>
