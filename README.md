@@ -22,5 +22,6 @@
 - Add [this TikTok video](https://www.tiktok.com/@codetheworld.io/video/7283734773472693511?is_from_webapp=1&sender_device=pc&web_id=7284955038152869409) to overlay some of the icons.
 - Add box reflect glowing icons. Done :+1:
 - Modify the first animation so that the stars and eyes leave to animate on loop.
+- Add some kind of email send format to the page.
 
 🌐 Check out my portfolio website here: [Click Me](https://bonkkersp.azurewebsites.net/) 🌐
