@@ -11,7 +11,7 @@
 - Added coding language icons and text to the infite scroll animation component. ✨
 - Added hover effect to infinite scroll animation icons. ✨
 - Added image slider to the site. ✨
-- Added wawe background to navbar and footer. ✨
+- Added wave background to navbar and footer. ✨
 
 ## To do :white_check_mark:
 
