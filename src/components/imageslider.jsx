@@ -3,114 +3,109 @@ import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
 import "../style/imageslider.css";
 
 function ImageSlider({ images, links }) {
-    const [imageIndex, setImageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
 
-    function showNextImage() {
-        setImageIndex((index) => {
-            if (index === images.length - 1) return 0;
-            return index + 1;
-        });
-    }
+  function showNextImage() {
+    setImageIndex((index) => {
+      if (index === images.length - 1) return 0;
+      return index + 1;
+    });
+  }
 
-    function showPrevImage() {
-        setImageIndex((index) => {
-            if (index === 0) return images.length - 1;
-            return index - 1;
-        });
-    }
+  function showPrevImage() {
+    setImageIndex((index) => {
+      if (index === 0) return images.length - 1;
+      return index - 1;
+    });
+  }
 
-    return (
-        <section
-            aria-label="Image Slider"
-            style={{ width: "100%", height: "100%", position: "relative" }}
+  return (
+    <section
+      aria-label="Image Slider"
+      style={{ width: "100%", height: "100%", position: "relative" }}
+    >
+      <a href="#after-image-slider-controls" className="skip-link">
+        Skip Image Slider Controls
+      </a>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            width: `${images.length * 100}%`,
+            height: "100%",
+            display: "flex",
+            transform: `translateX(-${imageIndex * (100 / images.length)}%)`,
+            transition: "transform 0.3s ease-in-out",
+          }}
         >
-            <a href="#after-image-slider-controls" className="skip-link">
-                Skip Image Slider Controls
+          {images.map(({ url, alt }, index) => (
+            <a
+              key={url}
+              href={links[index]} // Use the link corresponding to the current image
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-hidden={imageIndex !== index}
+              className="img-slider-img-link"
+              style={{
+                flex: `0 0 ${100 / images.length}%`,
+                width: `${100 / images.length}%`,
+              }}
+            >
+              <img src={url} alt={alt} className="img-slider-img" />
             </a>
-            <div
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    position: "relative",
-                    overflow: "hidden",
-                }}
-            >
-                <div
-                    style={{
-                        width: `${images.length * 100}%`,
-                        height: "100%",
-                        display: "flex",
-                        transform: `translateX(-${imageIndex * (100 / images.length)}%)`,
-                        transition: "transform 0.3s ease-in-out",
-                    }}
-                >
-                    {images.map(({ url, alt }, index) => (
-                        <a
-                            key={url}
-                            href={links[index]} // Use the link corresponding to the current image
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-hidden={imageIndex !== index}
-                            className="img-slider-img-link"
-                            style={{
-                                flex: `0 0 ${100 / images.length}%`,
-                                width: `${100 / images.length}%`,
-                            }}
-                        >
-                            <img
-                                src={url}
-                                alt={alt}
-                                className="img-slider-img"
-                            />
-                        </a>
-                    ))}
-
-                </div>
-            </div>
-            <button
-                onClick={showPrevImage}
-                className="img-slider-btn"
-                style={{ left: 0 }}
-                aria-label="View Previous Image"
-            >
-                <ArrowBigLeft aria-hidden />
-            </button>
-            <button
-                onClick={showNextImage}
-                className="img-slider-btn"
-                style={{ right: 0 }}
-                aria-label="View Next Image"
-            >
-                <ArrowBigRight aria-hidden />
-            </button>
-            <div
-                style={{
-                    position: "absolute",
-                    bottom: ".5rem",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    display: "flex",
-                    gap: ".25rem",
-                }}
-            >
-                {images.map((_, index) => (
-                    <button
-                        key={index}
-                        className="img-slider-dot-btn"
-                        aria-label={`View Image ${index + 1}`}
-                        onClick={() => setImageIndex(index)}
-                    >
-                        {index === imageIndex ? (
-                            <CircleDot aria-hidden />
-                        ) : (
-                            <Circle aria-hidden />
-                        )}
-                    </button>
-                ))}
-            </div>
-            <div id="after-image-slider-controls" />
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+      <button
+        onClick={showPrevImage}
+        className="img-slider-btn"
+        style={{ left: 0 }}
+        aria-label="View Previous Image"
+      >
+        <ArrowBigLeft aria-hidden />
+      </button>
+      <button
+        onClick={showNextImage}
+        className="img-slider-btn"
+        style={{ right: 0 }}
+        aria-label="View Next Image"
+      >
+        <ArrowBigRight aria-hidden />
+      </button>
+      <div
+        style={{
+          position: "absolute",
+          bottom: ".5rem",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: ".25rem",
+        }}
+      >
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className="img-slider-dot-btn"
+            aria-label={`View Image ${index + 1}`}
+            onClick={() => setImageIndex(index)}
+          >
+            {index === imageIndex ? (
+              <CircleDot aria-hidden />
+            ) : (
+              <Circle aria-hidden />
+            )}
+          </button>
+        ))}
+      </div>
+      <div id="after-image-slider-controls" />
+    </section>
+  );
 }
 
 export default ImageSlider;

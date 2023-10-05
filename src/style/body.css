@@ -3,33 +3,37 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 10%;
 }
 .myprojects {
   display: flex;
   flex-direction: column;
+
   align-items: center;
+
+  margin-top: 5%;
 }
 .scrollanimation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .icon-body1 {
   display: flex;
   justify-content: flex-start;
   align-items: start;
+  margin-bottom: 5%;
 }
 .icon-body2 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8%;
+  margin-bottom: 10%;
   margin-top: 5%;
   padding-top: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 .icon-body3 {
@@ -37,7 +41,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
 }
 
 .icon1 {
@@ -139,9 +143,6 @@
 }
 
 @media (max-width: 700px) {
-  .Body {
-    min-height: 2400px;
-  }
   .text-animation1-2 {
     width: 95%;
     font-size: 14px;
@@ -162,8 +163,6 @@
   }
   .icon-body2 {
     flex-direction: column;
-
-    min-height: 500px;
   }
   .icon-body1 {
     flex-direction: column;

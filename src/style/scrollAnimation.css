@@ -121,6 +121,9 @@ body {
   .scroller {
     max-width: 400px;
   }
+  .scroll-icons {
+    font-size: 90px;
+  }
 }
 
 @media (max-width: 400px) {

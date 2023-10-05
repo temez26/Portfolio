@@ -1,25 +1,40 @@
-footer {
-  position: relative;
-  margin-right: 2%;
-  margin-left: 2%;
+.footer-stuff {
+  min-height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: self-end;
+  margin-bottom: 0;
+}
+.wawe2 {
+  position: absolute;
+
+  width: 100%;
+  transform: scaleY(-1);
+}
+.wawe2 path {
+  fill: blue;
+  fill-opacity: 0.6;
 }
 
 .footer-section {
   display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-  font-style: italic;
+  font-family: "Marck Script", cursive;
+  position: relative;
+}
+.footer-text:first-child {
+  margin-right: 20px;
 }
 
 .socials {
+  position: relative;
   display: flex;
   justify-content: center;
 }
 .social-icons-container {
+  position: relative;
+
   display: flex;
   gap: 10px;
-  justify-content: center;
 }
 
 .icon-container {

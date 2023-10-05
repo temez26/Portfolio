@@ -12,29 +12,22 @@ import {
   faCss3Alt,
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
-import { faImage } from "@fortawesome/free-solid-svg-icons";
 
 function Scrollanimation() {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
 
-    // If a user hasn't opted in for reduced motion, then we add the animation
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       addAnimation();
     }
 
     function addAnimation() {
       scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", true);
 
-        // Make an array from the elements within `.scroller-inner`
         const scrollerInner = scroller.querySelector(".scroller__inner");
         const scrollerContent = Array.from(scrollerInner.children);
 
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
         scrollerContent.forEach((item) => {
           const duplicatedItem = item.cloneNode(true);
           duplicatedItem.setAttribute("aria-hidden", true);
@@ -46,7 +39,7 @@ function Scrollanimation() {
 
   return (
     <div className="scrollanimation">
-      <h1 style={{ textAlign: "center" }} className="h1-color">
+      <h1 style={{ textAlign: "center" }} className="text-animation-h2">
         Exploring a World of Coding: My Diverse Skillset
       </h1>
       <div className="scroller" data-speed="fast">
