@@ -9,8 +9,8 @@ import Coding from "../assets/Coding1.json";
 import Animation from "./Animation.jsx";
 import CodingApe from "../assets/codingape.json";
 import ImageSlider from "./imageslider.jsx";
-import Wawe from "../assets/wawe5.svg";
-import Wawe2 from "../assets/wawes9.svg";
+import blob from "../assets/blob8.svg";
+import wawe5 from "../assets/wawes10.svg";
 import peak from "../assets/peaks1.svg";
 import peak1 from "../assets/peaks3.svg";
 import peak5 from "../assets/peaks5.svg";
@@ -189,9 +189,12 @@ function Body() {
           <Animation animationData={CodingApe} className="icon2" />
         </div>
       </div>
+
       <div className="image-container">
-        <div className="myprojects">
-          <h1 className="text-animation-h2">My Projects</h1>
+        <img src={blob} className="body-block-4-background" />
+        <div className="body-block-4">
+          <h1 className="text-animation-h1">My Projects</h1>
+
           <ImageSlider images={IMAGES} links={links} className="images" />
         </div>
       </div>
