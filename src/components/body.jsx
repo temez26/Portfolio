@@ -3,10 +3,18 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import "../style/scrollAnimation.css";
 import Scrollanimation from "./scrollAnimation.jsx";
 import React, { useState, useEffect, useRef } from "react";
+import { useInView } from 'react-intersection-observer';
 import Lottie from "lottie-react";
-import Coding from "../assets/coding.json";
+import Coding from "../assets/Coding1.json";
+import Animation from "./Animation.jsx"
 import CodingApe from "../assets/codingape.json";
 import ImageSlider from "./imageslider.jsx";
+import Wawe from "../assets/wawe5.svg"
+import Wawe2 from "../assets/wawes9.svg"
+import peak from "../assets/peaks1.svg"
+import peak1 from "../assets/peaks3.svg"
+import peak5 from "../assets/peaks5.svg"
+import Wawe1 from "../assets/wawes4.svg"
 import website1 from "../assets/website1.png";
 import website2 from "../assets/website2.png";
 import website3 from "../assets/website7.png";
@@ -16,6 +24,9 @@ import website5 from "../assets/website5.png";
 gsap.registerPlugin(ScrollTrigger);
 
 function Body() {
+  const [isAnimationVisible, setIsAnimationVisible] = useState(false);
+  const { ref, inView } = useInView();
+
   const [codingStopped, setCodingStopped] = useState(false);
   const [codingApeStopped, setCodingApeStopped] = useState(false);
   const [computerStopped, setComputerStopped] = useState(false);
@@ -39,6 +50,16 @@ function Body() {
     "https://slaythedragon.azurewebsites.net/",
     "https://garden-web.azurewebsites.net/",
   ];
+
+   useEffect(() => {
+    if (inView && !isAnimationVisible) {
+      setIsAnimationVisible(true);
+      console.log("Animation played");
+    } else if (!inView && isAnimationVisible) {
+      setIsAnimationVisible(false);
+      console.log("Animation stopped");
+    }
+  }, [inView, isAnimationVisible]);
 
   useEffect(() => {
     const codingAnimation = gsap.from(codingRef.current, {
@@ -123,11 +144,16 @@ function Body() {
 
   return (
     <div className="Body">
-      <div className="icon-body1">
-        <Lottie animationData={Coding} loop={codingStopped} className="icon1" />
+    
+
+      <div className="body-block-1">
+    
+        <div ref={ref} className="animation-container">
+     <Animation animationData={Coding} className="icon1" />
+    </div>
         <div ref={codingRef} className="text-animation1">
           <h2 className="text-animation-h2">My portfolio</h2>
-          <p>
+          <p className="p-text">
             Hello, I'm Teemu Kalmari, a dedicated Software Engineer student with
             a passion for crafting digital experiences. My journey in the world
             of technology has been shaped by a profound love for coding and a
@@ -135,15 +161,27 @@ function Body() {
           </p>
         </div>
       </div>
-
-      <div className="icon-body3">
-        <Scrollanimation />
+      <div>
+      
+      <div className="body-block-2">
+      
+        
+       <img src={Wawe1} className="body-block-2-background" />
+       <Scrollanimation />
+    
+      </div>
+        
+      
       </div>
 
-      <div className="icon-body2">
-        <div ref={codingApeRef} className="text-animation1-2">
+      <div className="body-block-3">
+       <img src={peak} className="body-block-3-background" />
+       
+       
+        <div ref={codingApeRef} className="text-animation-1-2">
+        <div className="text-background">
           <h2 className="text-animation-h2">Technical Expertise</h2>
-          <p>
+          <p className="p-text">
             Python: My code is poetry. I'm fluent in Python, leveraging its
             versatility to create powerful solutions that range from data
             analysis to web development. Web Development: I'm well-versed in the
@@ -155,22 +193,32 @@ function Body() {
             C#, enabling me to tackle complex software projects and build
             efficient applications.
           </p>
+         </div>
         </div>
-        <Lottie animationData={CodingApe} className="icon2" />
+        <div className="monkey">
+        <Animation animationData={CodingApe} className="icon2" />
+
+        </div>
+        
+        
       </div>
-      <div
-        style={{
-          maxWidth: "1400px",
-          width: "100%",
-          aspectRatio: "10 / 6",
-          margin: "0 auto",
-        }}
-        className="myprojects"
-      >
+      <div className="image-container">
+ 
+     
+  
+      <div className="myprojects">
+ 
+      
+      
         <h1 className="text-animation-h2">My Projects</h1>
-        <ImageSlider images={IMAGES} links={links} />
-        <a href="/" style={{ fontSize: "4rem" }}></a>
+        <ImageSlider images={IMAGES} links={links}  className="images" />
+        
+
+
       </div>
+
+    
+ </div>
     </div>
   );
 }
