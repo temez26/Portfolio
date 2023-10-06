@@ -2,30 +2,24 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
-  position: relative;
- 
 
+  position: relative;
 }
 
 .myprojects {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    position: relative;
-    align-items: center;
-    width:100%;
-    padding:1%;
-    padding-top:5%;
-    padding-bottom:3%;
-    
-    
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding: 1%;
+  padding-top: 5%;
+  padding-bottom: 3%;
 }
 .images {
-    object-fit:cover;
+  object-fit: cover;
 }
-
 
 .scrollanimation {
   display: flex;
@@ -35,75 +29,68 @@
 }
 
 .body-block-1 {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-   
-    padding-bottom:4%;
-    border-bottom: 5px solid white; 
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+
+  padding-bottom: 4%;
+  border-bottom: 5px solid white;
 }
 
 .body-block-1-background {
-   
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 .body-block-2 {
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 7%;
-    padding-bottom: 10%;
-    min-height:100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7%;
+  padding-bottom: 10%;
+  min-height: 100%;
 }
 .body-block-2-background {
-    opacity: 0.8;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 .body-block-3 {
-    min-height:100%;
-    position:relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: space-between;
-    
-    margin-top: 5%;
-    padding-top: 5%;
-    padding-bottom: 10%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 .body-block-3-background {
-    opacity: 0.8;
-    position: absolute;
-    width: 100%;
-  
-    bottom: 0;
-    left: 0;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+
+  bottom: 0;
+  left: 0;
 }
 
 .image-container {
-   position:relative;
+  position: relative;
 }
-
-
-
-
-
 
 .monkey {
-    background-color: black;
-    border-radius: 5px;
-    margin-right: 2%;
+  background-color: black;
+  border-radius: 5px;
+  margin-right: 2%;
 }
-
 
 .text-animation1 {
   padding-right: 5%;
@@ -116,49 +103,44 @@
   font-size: 30px;
   padding-left: 5%;
   color: white;
-  width:50%;
+  width: 50%;
   font-weight: 500;
 }
 .text-animation-h2 {
-   
   font-size: 60px;
   font-weight: 500;
   color: rgb(206, 158, 0);
- 
-  
- 
 }
 
 .text-animation2 {
   margin-right: 23%;
 }
 
-
 @media (max-width: 1400px) {
-    .body-block-3 {
-        flex-direction: column;
-    }
-    .monkey {
-        margin-right:0;
-    }
-    .body-block-1 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .text-animation-1-2 {
-        font-size: 25px;
-        width: 100%;
-        padding-right: 2%;
-        padding-left: 2%;
-        font-weight: 500;
-    }
+  .body-block-3 {
+    flex-direction: column;
+  }
+  .monkey {
+    margin-right: 0;
+  }
+  .body-block-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-animation-1-2 {
+    font-size: 25px;
+    width: 100%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-weight: 500;
+  }
 
   .text-animation1 {
     margin-top: 5%;
     width: 100%;
-    padding-right:2%;
-    padding-left:2%;
+    padding-right: 2%;
+    padding-left: 2%;
     font-weight: 500;
     font-size: 27px;
   }
@@ -173,14 +155,13 @@
 @media (max-width: 1200px) {
   .text-animation-1-2 {
     font-size: 22px;
-    
-   
+
     font-weight: 500;
   }
 
   .text-animation1 {
     margin-top: 10%;
-    
+
     font-weight: 500;
     font-size: 24px;
   }
@@ -193,19 +174,17 @@
 }
 
 @media (max-width: 1000px) {
-
   .icon1 {
-      width:30%;
+    width: 30%;
   }
   .text-animation-1-2 {
     font-size: 18px;
-    
-   
+
     font-weight: 500;
   }
   .text-animation1 {
     margin-top: 10%;
-   
+
     font-weight: 500;
     font-size: 20px;
   }
@@ -214,9 +193,9 @@
     font-weight: 500;
     color: rgb(206, 158, 0);
   }
-    .myprojects {
-        aspect-ratio: 3/4;
-    }
+  .myprojects {
+    aspect-ratio: 3/4;
+  }
 }
 
 @media (max-width: 700px) {
@@ -238,8 +217,4 @@
     font-weight: 500;
     font-size: 16px;
   }
-   
-
 }
-
-

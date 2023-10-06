@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Lottie from "lottie-react";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 function Animation({ animationData }) {
   const [isAnimationVisible, setIsAnimationVisible] = useState(false);
@@ -18,11 +18,7 @@ function Animation({ animationData }) {
 
   return (
     <div ref={ref} className="animation-container">
-      <Lottie
-        animationData={animationData}
-       
-        loop={isAnimationVisible}
-      />
+      <Lottie animationData={animationData} loop={isAnimationVisible} />
     </div>
   );
 }

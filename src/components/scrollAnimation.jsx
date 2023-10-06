@@ -12,7 +12,7 @@ import {
   faCss3Alt,
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
-import Wawe1 from "../assets/wawes3.svg"
+import Wawe1 from "../assets/wawes3.svg";
 
 function Scrollanimation() {
   useEffect(() => {
@@ -40,7 +40,6 @@ function Scrollanimation() {
 
   return (
     <div className="scrollanimation">
-    
       <h1 style={{ textAlign: "center" }} className="text-animation-h2">
         Exploring a World of Coding: My Diverse Skillset
       </h1>
