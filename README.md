@@ -12,6 +12,7 @@
 - Added hover effect to infinite scroll animation icons. ✨
 - Added image slider to the site. ✨
 - Added wave background to navbar and footer. ✨
+- Added backgrounds for body. ✨
 
 ## To do :white_check_mark:
 
