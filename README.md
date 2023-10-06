@@ -12,6 +12,7 @@
 - Added hover effect to infinite scroll animation icons. ✨
 - Added image slider to the site. ✨
 - Added wave background to navbar and footer. ✨
+- Added backgrounds for body. ✨
 
 ## To do :white_check_mark:
 
@@ -23,5 +24,6 @@
 - Add box reflect glowing icons. Done :+1:
 - Modify the first animation so that the stars and eyes leave to animate on loop.
 - Add some kind of email send format to the page.
+- 
 
 🌐 Check out my portfolio website here: [Click Me](https://bonkkersp.azurewebsites.net/) 🌐
