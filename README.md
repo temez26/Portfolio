@@ -26,6 +26,7 @@
 - Modify the first animation so that the stars and eyes leave to animate on loop.
 - Add some kind of email send format to the page (needs only backend). Done :+1:
 - Add menu button for smaller screens.
+- Add filter: brightness() to some of the text in the site.
   
 
 🌐 Check out my portfolio website here: [Click Me](https://bonkkersp.azurewebsites.net/) 🌐
