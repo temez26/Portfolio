@@ -6,13 +6,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import Lottie from "lottie-react";
 import Coding from "../assets/Coding1.json";
+import ContactForm from "./contactForm.jsx";
 import Animation from "./Animation.jsx";
 import CodingApe from "../assets/codingape.json";
 import ImageSlider from "./imageslider.jsx";
 import blob from "../assets/blob8.svg";
-import wawe5 from "../assets/wawes10.svg";
+import Wawe5 from "../assets/wawes12.svg";
 import peak from "../assets/peaks1.svg";
-import peak1 from "../assets/peaks3.svg";
+import blob1 from "../assets/blob12.svg";
 import peak5 from "../assets/peaks5.svg";
 import Wawe1 from "../assets/wawes4.svg";
 import website1 from "../assets/website1.png";
@@ -166,6 +167,7 @@ function Body() {
       </div>
 
       <div className="body-block-3">
+        <img src={Wawe5} className="body-block-3-background-top" />
         <img src={peak} className="body-block-3-background" />
 
         <div ref={codingApeRef} className="text-animation-1-2">
@@ -196,6 +198,11 @@ function Body() {
           <h1 className="text-animation-h1">My Projects</h1>
 
           <ImageSlider images={IMAGES} links={links} className="images" />
+        </div>
+      </div>
+      <div className="body-block-5">
+        <div className="body-block-5-layer">
+          <ContactForm />
         </div>
       </div>
     </div>
