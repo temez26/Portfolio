@@ -9,10 +9,10 @@ function Animation({ animationData }) {
   useEffect(() => {
     if (inView && !isAnimationVisible) {
       setIsAnimationVisible(true);
-      console.log("Animation played");
+      
     } else if (!inView && isAnimationVisible) {
       setIsAnimationVisible(false);
-      console.log("Animation stopped");
+     
     }
   }, [inView, isAnimationVisible]);
 

@@ -1,73 +1,97 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [comment, setComment] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [formSent, setFormSent] = useState(false);
-  const [error, setError] = useState("");
+const ContactForm = ({ serviceID, templateID }) => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [comment, setComment] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [formSent, setFormSent] = useState(false);
+    const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    emailjs.init("publicid");
 
-    setIsLoading(true);
+    const validateEmail = (email) => {
+        const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        return regex.test(email);
+    };
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          comment,
-        }),
-      });
+    const sendMail = async () => {
+        setIsLoading(true);
 
-      if (response.status === 200) {
-        setFormSent(true);
-      } else {
-        setError("An error occurred while submitting the form.");
-      }
-    } catch (error) {
-      setError(error.message);
-    }
+        try {
+            if (!name || !email || !comment) {
+                setError("Please fill in all fields before submitting.");
+                setIsLoading(false);
+                return;
+            }
 
-    setIsLoading(false);
-  };
+            if (!validateEmail(email)) {
+                setError("Please enter a valid email address.");
+                setIsLoading(false);
+                return;
+            }
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <h1>Contact Us</h1>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <textarea
-        name="comment"
-        placeholder="Comment"
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
-      />
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? "Sending..." : "Submit"}
-      </button>
-      {formSent && <p className="success">Your message has been sent!</p>}
-      {error && <p className="error">{error}</p>}
-    </form>
-  );
+            const params = {
+                to_name: name,
+                from_name: email,
+                message: comment,
+            };
+            const serviceID = "";
+            const templateID = "";
+
+            const response = await emailjs.send(serviceID, templateID, params);
+
+            if (response.status === 200) {
+                setFormSent(true);
+                setName("");
+                setEmail("");
+                setComment("");
+            } else {
+                setError("An error occurred while submitting the form.");
+            }
+        } catch (err) {
+            setError(err.message);
+        }
+
+        setIsLoading(false);
+    };
+
+    return (
+        <form>
+            <h1>Contact Us</h1>
+            <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoComplete="name" 
+            />
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email" 
+            />
+            <textarea
+                name="comment"
+                placeholder="Comment"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+                autoComplete="off" 
+            />
+            <button type="button" onClick={sendMail} disabled={isLoading}>
+                {isLoading ? "Sending..." : "Submit"}
+            </button>
+            {formSent && (
+                <p className="success">Your message has been sent!</p>
+            )}
+            {error && <p className="error">{error}</p>}
+        </form>
+    );
 };
 
 export default ContactForm;

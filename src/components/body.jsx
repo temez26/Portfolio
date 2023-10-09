@@ -55,10 +55,10 @@ function Body() {
   useEffect(() => {
     if (inView && !isAnimationVisible) {
       setIsAnimationVisible(true);
-      console.log("Animation played");
+     
     } else if (!inView && isAnimationVisible) {
       setIsAnimationVisible(false);
-      console.log("Animation stopped");
+      
     }
   }, [inView, isAnimationVisible]);
 
@@ -77,12 +77,7 @@ function Body() {
       paused: true,
     });
 
-    const computerAnimation = gsap.from(computerRef.current, {
-      opacity: 0,
-      y: 20,
-      duration: 1,
-      paused: true,
-    });
+  
 
     ScrollTrigger.create({
       trigger: codingRef.current,
@@ -119,27 +114,12 @@ function Body() {
       },
     });
 
-    ScrollTrigger.create({
-      trigger: computerRef.current,
-      start: "top 90%",
-      once: true,
-
-      onEnter: () => {
-        setTimeout(() => {
-          setComputerStopped(false);
-          computerAnimation.play();
-        });
-      },
-      onLeaveBack: () => {
-        setComputerStopped(true);
-        computerAnimation.pause();
-      },
-    });
+;
 
     return () => {
       codingAnimation.kill();
       codingApeAnimation.kill();
-      computerAnimation.kill();
+     
     };
   }, []);
 
