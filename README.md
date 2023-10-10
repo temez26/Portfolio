@@ -14,6 +14,7 @@
 - Added wave background to navbar and footer. ✨
 - Added backgrounds for all parts of the body. ✨
 - Added contact form fronend. ✨
+- Added emailjs service for the contact form (need to add email-js keys to env on azure). ✨
 
 ## To do :white_check_mark:
 
