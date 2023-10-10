@@ -13,7 +13,6 @@
 - Added image slider to the site. ✨
 - Added wave background to navbar and footer. ✨
 - Added backgrounds for all parts of the body. ✨
-- Added contact form fronend. ✨
 - Added fully functioning contact-form for the site. ✨
 
 ## To do :white_check_mark:
