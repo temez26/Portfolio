@@ -4,6 +4,7 @@ import "../style/scrollAnimation.css";
 import Scrollanimation from "./scrollAnimation.jsx";
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+
 import Lottie from "lottie-react";
 import Coding from "../assets/Coding1.json";
 import ContactForm from "./contactForm.jsx";
@@ -55,10 +56,8 @@ function Body() {
   useEffect(() => {
     if (inView && !isAnimationVisible) {
       setIsAnimationVisible(true);
-     
     } else if (!inView && isAnimationVisible) {
       setIsAnimationVisible(false);
-      
     }
   }, [inView, isAnimationVisible]);
 
@@ -76,8 +75,6 @@ function Body() {
       duration: 1,
       paused: true,
     });
-
-  
 
     ScrollTrigger.create({
       trigger: codingRef.current,
@@ -114,12 +111,9 @@ function Body() {
       },
     });
 
-;
-
     return () => {
       codingAnimation.kill();
       codingApeAnimation.kill();
-     
     };
   }, []);
 

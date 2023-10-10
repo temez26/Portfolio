@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Body from "./components/body.jsx";
+
 import "./style/body.css";
 import "./style/Footer.css";
 import "./style/Navbar.css";

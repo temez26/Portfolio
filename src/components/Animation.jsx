@@ -9,10 +9,8 @@ function Animation({ animationData }) {
   useEffect(() => {
     if (inView && !isAnimationVisible) {
       setIsAnimationVisible(true);
-      
     } else if (!inView && isAnimationVisible) {
       setIsAnimationVisible(false);
-     
     }
   }, [inView, isAnimationVisible]);
 

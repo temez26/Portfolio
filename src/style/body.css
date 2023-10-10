@@ -152,17 +152,17 @@
 }
 
 .body-block-5 .success {
-    color: #00a700; 
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
+  color: #00a700;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .body-block-5 .error {
-    color: #ff0000; 
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
+  color: #ff0000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .images {
