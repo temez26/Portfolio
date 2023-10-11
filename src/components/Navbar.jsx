@@ -23,7 +23,7 @@ const Navbar = () => {
   });
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode); // Invert the darkMode state
+    setDarkMode(!darkMode);
   };
 
   useEffect(() => {
@@ -75,8 +75,24 @@ const Navbar = () => {
                       checked={darkMode}
                     />
                   </section>
-                  <a className="right">Home</a>
-                  <a>Gallery</a>
+                  <div className="menu-button">
+                    <input
+                      type="checkbox"
+                      id="menu-toggle"
+                      className="menu-toggle"
+                    />
+                    <label htmlFor="menu-toggle" className="menu-icon">
+                      &#9776;
+                    </label>
+                    <div className="menu">
+                      <a className="right">Home</a>
+                      <a>Gallery</a>
+                    </div>
+                  </div>
+                  <div className="large-screen-links">
+                    <a className="right">Home</a>
+                    <a>Gallery</a>
+                  </div>
                 </section>
               </div>
             </nav>
