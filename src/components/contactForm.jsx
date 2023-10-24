@@ -65,7 +65,7 @@ const ContactForm = () => {
 
   return (
     <form>
-      <h1>Contact Us</h1>
+      <h1>Contact Me</h1>
       <input
         type="text"
         name="name"
