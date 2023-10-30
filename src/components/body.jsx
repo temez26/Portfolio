@@ -1,10 +1,10 @@
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../style/scrollAnimation.css";
 import Scrollanimation from "./scrollAnimation.jsx";
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-
 import Lottie from "lottie-react";
 import Coding from "../assets/Coding1.json";
 import ContactForm from "./contactForm.jsx";
@@ -23,20 +23,23 @@ import website3 from "../assets/website7.png";
 import website4 from "../assets/website4.png";
 import website5 from "../assets/website5.png";
 
+// Registering ScrollTrigger with gsap
 gsap.registerPlugin(ScrollTrigger);
 
+// Body component rendering various sections of the webpage
 function Body() {
-  const [isAnimationVisible, setIsAnimationVisible] = useState(false);
-  const { ref, inView } = useInView();
+  const [isAnimationVisible, setIsAnimationVisible] = useState(false); // State to manage animation visibility
+  const { ref, inView } = useInView(); // Hook to determine if the component is in view
 
+  // States and refs for managing animations
   const [codingStopped, setCodingStopped] = useState(false);
   const [codingApeStopped, setCodingApeStopped] = useState(false);
   const [computerStopped, setComputerStopped] = useState(false);
-
   const codingRef = useRef(null);
   const codingApeRef = useRef(null);
   const computerRef = useRef(null);
 
+  // Array of images and their associated links
   const IMAGES = [
     { url: website1, alt: "website1" },
     { url: website2, alt: "website2" },
@@ -45,6 +48,7 @@ function Body() {
     { url: website5, alt: "website5" },
   ];
 
+  // Array of links
   const links = [
     "https://superboi.azurewebsites.net/",
     "https://triv.azurewebsites.net/",
@@ -53,6 +57,7 @@ function Body() {
     "https://garden-web.azurewebsites.net/",
   ];
 
+  // Effect for managing visibility of the animation
   useEffect(() => {
     if (inView && !isAnimationVisible) {
       setIsAnimationVisible(true);
@@ -61,7 +66,9 @@ function Body() {
     }
   }, [inView, isAnimationVisible]);
 
+  // Effect for managing GSAP animations
   useEffect(() => {
+    // GSAP animation for the coding section
     const codingAnimation = gsap.from(codingRef.current, {
       opacity: 0,
       y: 20,
@@ -69,6 +76,7 @@ function Body() {
       paused: true,
     });
 
+    // GSAP animation for the coding ape section
     const codingApeAnimation = gsap.from(codingApeRef.current, {
       opacity: 0,
       y: 20,
@@ -76,6 +84,7 @@ function Body() {
       paused: true,
     });
 
+    // ScrollTrigger setup for the coding section
     ScrollTrigger.create({
       trigger: codingRef.current,
       start: "top 90%",
@@ -93,11 +102,11 @@ function Body() {
       },
     });
 
+    // ScrollTrigger setup for the coding ape section
     ScrollTrigger.create({
       trigger: codingApeRef.current,
       start: "top 80%",
       end: "bottom 50%",
-
       once: true,
       onEnter: () => {
         setTimeout(() => {
@@ -111,14 +120,17 @@ function Body() {
       },
     });
 
+    // Clean up the animations on unmount
     return () => {
       codingAnimation.kill();
       codingApeAnimation.kill();
     };
   }, []);
 
+  
   return (
     <div className="Body">
+      {/* Section 1: Introduction */}
       <div className="body-block-1">
         <div ref={ref} className="animation-container">
           <Animation animationData={Coding} className="icon1" />
@@ -133,17 +145,17 @@ function Body() {
           </p>
         </div>
       </div>
+      {/* Section 2: Scroll Animation */}
       <div>
         <div className="body-block-2">
           <img src={Wawe1} className="body-block-2-background" />
           <Scrollanimation />
         </div>
       </div>
-
+      {/* Section 3: Technical Expertise */}
       <div className="body-block-3">
         <img src={Wawe5} className="body-block-3-background-top" />
         <img src={peak} className="body-block-3-background" />
-
         <div ref={codingApeRef} className="text-animation-1-2">
           <div className="text-background">
             <h2 className="text-animation-h2">Technical Expertise</h2>
@@ -165,15 +177,15 @@ function Body() {
           <Animation animationData={CodingApe} className="icon2" />
         </div>
       </div>
-
+      {/* Section 4: Projects */}
       <div className="image-container">
         <img src={blob} className="body-block-4-background" />
         <div className="body-block-4">
           <h1 className="text-animation-h1">My Projects</h1>
-
           <ImageSlider images={IMAGES} links={links} className="images" />
         </div>
       </div>
+      {/* Section 5: Contact Form */}
       <div className="body-block-5">
         <div className="body-block-5-layer">
           <ContactForm />
@@ -182,5 +194,6 @@ function Body() {
     </div>
   );
 }
+
 
 export default Body;

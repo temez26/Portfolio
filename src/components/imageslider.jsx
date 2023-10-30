@@ -1,10 +1,14 @@
+
 import React, { useState } from "react";
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
 import "../style/imageslider.css";
 
+// ImageSlider component for rendering an image slider with navigation controls
 function ImageSlider({ images, links }) {
+  // State for managing the current image index
   const [imageIndex, setImageIndex] = useState(0);
 
+  // Function to show the next image in the slider
   function showNextImage() {
     setImageIndex((index) => {
       if (index === images.length - 1) return 0;
@@ -12,6 +16,7 @@ function ImageSlider({ images, links }) {
     });
   }
 
+  // Function to show the previous image in the slider
   function showPrevImage() {
     setImageIndex((index) => {
       if (index === 0) return images.length - 1;
@@ -19,11 +24,13 @@ function ImageSlider({ images, links }) {
     });
   }
 
+ 
   return (
     <section
       aria-label="Image Slider"
       style={{ width: "100%", height: "100%", position: "relative" }}
     >
+      {/* Skip link for image slider controls */}
       <a href="#after-image-slider-controls" className="skip-link">
         Skip Image Slider Controls
       </a>
@@ -35,6 +42,7 @@ function ImageSlider({ images, links }) {
           overflow: "hidden",
         }}
       >
+        {/* Slider content with images and corresponding links */}
         <div
           style={{
             width: `${images.length * 100}%`,
@@ -62,6 +70,7 @@ function ImageSlider({ images, links }) {
           ))}
         </div>
       </div>
+      {/* Button for viewing the previous image */}
       <button
         onClick={showPrevImage}
         className="img-slider-btn"
@@ -70,6 +79,7 @@ function ImageSlider({ images, links }) {
       >
         <ArrowBigLeft aria-hidden />
       </button>
+      {/* Button for viewing the next image */}
       <button
         onClick={showNextImage}
         className="img-slider-btn"
@@ -78,6 +88,7 @@ function ImageSlider({ images, links }) {
       >
         <ArrowBigRight aria-hidden />
       </button>
+      {/* Navigation dots for indicating the current image */}
       <div
         style={{
           position: "absolute",
@@ -103,9 +114,11 @@ function ImageSlider({ images, links }) {
           </button>
         ))}
       </div>
+      {/* Anchor point after image slider controls */}
       <div id="after-image-slider-controls" />
     </section>
   );
 }
+
 
 export default ImageSlider;
