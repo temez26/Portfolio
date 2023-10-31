@@ -52,7 +52,7 @@
   }
 }
 
-/* general styles */
+
 
 :root {
   --clr-neutral-100: hsl(0, 0%, 100%);
@@ -109,7 +109,7 @@ body {
   color: rgb(206, 158, 0);
 }
 
-/* for testing purposed to ensure the animation lined up correctly */
+
 
 @media (max-width: 1300px) {
   .scroller {
