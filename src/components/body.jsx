@@ -154,7 +154,7 @@ function Body() {
       </div>
       {/* Section 3: Technical Expertise */}
       <div className="body-block-3">
-        <img src={Wawe5} className="body-block-3-background-top" />
+       
         <img src={peak} className="body-block-3-background" />
         <div ref={codingApeRef} className="text-animation-1-2">
           <div className="text-background">
