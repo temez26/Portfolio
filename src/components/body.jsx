@@ -19,7 +19,7 @@ import peak5 from "../assets/peaks5.svg";
 import Wawe1 from "../assets/wawes4.svg";
 import website1 from "../assets/website1.png";
 import website2 from "../assets/website2.png";
-import website6 from "../assets/Alko.png";
+import website6 from "../assets/alko1.png";
 import website3 from "../assets/website7.png";
 import website4 from "../assets/website4.png";
 import website5 from "../assets/website5.png";
