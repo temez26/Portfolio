@@ -19,6 +19,7 @@ import peak5 from "../assets/peaks5.svg";
 import Wawe1 from "../assets/wawes4.svg";
 import website1 from "../assets/website1.png";
 import website2 from "../assets/website2.png";
+import website6 from "../assets/Alko.png";
 import website3 from "../assets/website7.png";
 import website4 from "../assets/website4.png";
 import website5 from "../assets/website5.png";
@@ -43,18 +44,21 @@ function Body() {
   const IMAGES = [
     { url: website1, alt: "website1" },
     { url: website2, alt: "website2" },
-    { url: website3, alt: "website3" },
+    { url: website6, alt: "website6" },
     { url: website4, alt: "website4" },
-    { url: website5, alt: "website5" },
+    { url: website3, alt: "website5" },
+    { url: website5, alt: "website3" },
   ];
 
   // Array of links
   const links = [
     "https://superboi.azurewebsites.net/",
     "https://triv.azurewebsites.net/",
+     "https://niisku.lab.fi/~x108669/alko/index.php",
+     "https://slaythedragon.azurewebsites.net/",
     "https://particless.azurewebsites.net/",
-    "https://slaythedragon.azurewebsites.net/",
     "https://garden-web.azurewebsites.net/",
+    
   ];
 
   // Effect for managing visibility of the animation
@@ -138,10 +142,7 @@ function Body() {
         <div ref={codingRef} className="text-animation1">
           <h2 className="text-animation-h2">My portfolio</h2>
           <p className="p-text">
-            Hello, I'm Teemu Kalmari, a dedicated Software Engineer student with
-            a passion for crafting digital experiences. My journey in the world
-            of technology has been shaped by a profound love for coding and a
-            relentless curiosity for innovation.
+            Hi, I'm Teemu Kalmari, a Software Engineering student who enjoys coding and creating digital solutions. I'm always eager to explore new technologies and innovations.
           </p>
         </div>
       </div>
@@ -160,17 +161,7 @@ function Body() {
           <div className="text-background">
             <h2 className="text-animation-h2">Technical Expertise</h2>
             <p className="p-text">
-              Python: My code is poetry. I'm fluent in Python, leveraging its
-              versatility to create powerful solutions that range from data
-              analysis to web development. Web Development: I'm well-versed in
-              the art of web coding, with proficiency in both frontend and
-              backend technologies. I specialize in crafting seamless user
-              interfaces with popular frameworks like React and Vite, ensuring
-              that user experiences are not just functional but delightful. C++
-              & C#: My coding skills extend beyond web development. I'm adept in
-              C++ and C#, enabling me to tackle complex software projects and
-              build efficient applications.
-            </p>
+I excel in web coding, both frontend and backend, and create delightful user interfaces. Additionally, I have experience with various web frameworks. I'm adept in data analysis and web development, enabling me to handle complex software projects efficiently. In the ever-evolving tech landscape, I'm always eager to learn and adapt to new technologies.            </p>
           </div>
         </div>
         <div className="monkey">
